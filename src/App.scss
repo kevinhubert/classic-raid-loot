@@ -1,0 +1,23 @@
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+.header-primary {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+.reward {
+  display: flex;
+  padding: 2rem 0 2rem 2rem;
+  margin-bottom: 1rem;
+  border: 1px solid gray;
+  > div {
+    width: 25%;
+  }
+  &__name {
+    font-weight: 700;
+  }
+  &__class {
+  }
+  &__loot {
+  }
+}
