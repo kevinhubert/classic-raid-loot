@@ -10,14 +10,17 @@ $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
   padding: 2rem 0 2rem 2rem;
   margin-bottom: 1rem;
   border: 1px solid gray;
-  > div {
-    width: 25%;
+  align-items: center;
+  &__character {
+    width: 20%;
+    &--name {
+      font-weight: 700;
+    }
+    &--class {
+    }
   }
-  &__name {
-    font-weight: 700;
-  }
-  &__class {
-  }
+
   &__loot {
+    width: 50%;
   }
 }

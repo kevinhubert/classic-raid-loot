@@ -1,29 +1,5 @@
 export const data = [
     {
-        "id": 0,
-        "name": "previous life",
-        "loot": [
-            {
-                "playerName": "gizka",
-                "playerClass": "mage",
-                "itemID": 18808,
-                "npcID": 12018
-            },
-            {
-                "playerName": "gizka",
-                "playerClass": "mage",
-                "itemID": 16798,
-                "npcID": 11988
-            },
-            {
-                "playerName": "volrath",
-                "playerClass": "mage",
-                "itemID": 16796,
-                "npcID": 11982
-            }
-        ]
-    },
-    {
         "id": 1,
         "name": "MC 1",
         "loot": [
