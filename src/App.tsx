@@ -35,6 +35,7 @@ function App() {
             </div>
           </div>
           <div className="col-md-9">
+            <h3 className="text-center">{raid.name}</h3>
             {raid.loot.map((reward, index) => (
               <div className="reward" key={index}>
                 <div className="reward__character">
