@@ -1,5 +1,5 @@
-$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
-@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+$icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
+@import '../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
 
 .header-primary {
   padding-top: 1rem;
@@ -22,5 +22,10 @@ $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
 
   &__loot {
     width: 50%;
+    &--item {
+      // span:first-of-type {
+      //   display: none;
+      // }
+    }
   }
 }

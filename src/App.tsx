@@ -1,19 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { data } from './raid-data';
-import { tsConstructorType } from '@babel/types';
 
 function App() {
   const [raid, setRaid] = useState(data[0]);
 
   function filterRaid(id: number) {
     const currentRaid = data.filter(raid => raid.id === id);
-    console.log(currentRaid[0]);
     setRaid(currentRaid[0]);
   }
 
-  useEffect(() => {
-    console.log(raid.loot);
-  });
+  useEffect(() => {});
 
   return (
     <div className="App">
@@ -39,8 +35,8 @@ function App() {
             </div>
           </div>
           <div className="col-md-9">
-            {raid.loot.map(reward => (
-              <div className="reward">
+            {raid.loot.map((reward, index) => (
+              <div className="reward" key={index}>
                 <div className="reward__character">
                   <div className="reward__character--name">
                     {reward.playerName.charAt(0).toUpperCase() +
@@ -52,7 +48,11 @@ function App() {
                   </div>
                 </div>
                 <div className="reward__loot">
-                  <a href="#" data-wowhead={`item=${reward.itemID}`}></a>
+                  <a
+                    className="reward__loot--item"
+                    href="#"
+                    data-wowhead={`item=${reward.itemID}`}
+                  ></a>
                 </div>
                 <div className="reward__boss">
                   <a
