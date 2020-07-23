@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { data } from "./data/raid-data";
-
-const { dkptable } = data;
+import DisplayTable from "./components/DisplayTable";
 
 function App() {
+  const [table, setTable] = useState("dkptable");
+  const viewToggles = [
+    { name: "DKP Table", value: "dkptable" },
+    { name: "DKP History", value: "dkphistory" },
+    { name: "Loot History", value: "loothistory" },
+  ];
+
   return (
     <div className="App">
       <div className="container">
@@ -14,36 +19,23 @@ function App() {
         </div>
         <div className="row">
           <div className="col-md-12">
-            {dkptable.map((player) => (
-              <div className="list-item">
-                <div className="list-item__character">
-                  <div className="list-item__character--name">
-                    {player.player}
-                  </div>
-                  <div className="list-item__character--class">
-                    {player.class}
-                    <div>
-                      <img
-                        src={`https://wow.zamimg.com/images/wow/icons/large/classicon_${player.class.toLowerCase()}.jpg`}
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className="list-item__dkp">
-                  <div className="list-item__dkp--current">
-                    Current DKP: {player.dkp}
-                  </div>
-                  <div className="list-item__dkp--gained">
-                    Lifetime Gained: {player.lifetimegained}
-                  </div>
-                  <div className="list-item__dkp--spent">
-                    Lifetime Spent: {Number(player.lifetimespent) * -1}
-                  </div>
-                </div>
-              </div>
-            ))}
+            <div className="btn-group btn-group-lg button-toggles">
+              {viewToggles.map((viewToggle, index) => (
+                <button
+                  type="button"
+                  key={index}
+                  className="btn btn-primary"
+                  data-toggle={viewToggle.value}
+                  onClick={(e) => setTable(viewToggle.value)}
+                >
+                  {viewToggle.name}
+                </button>
+              ))}
+            </div>
           </div>
+        </div>
+        <div className="row">
+          <DisplayTable currentTable={table} />
         </div>
       </div>
     </div>

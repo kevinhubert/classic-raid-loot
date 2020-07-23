@@ -29,19 +29,19 @@
         colorLinks: true,
         iconizeLinks: true,
         renameLinks: true,
-        refreshLinks: true
+        refreshLinks: true,
       };
 
-      window.addEventListener('load', function() {
-        const raids = document.querySelectorAll('.list-group-item');
-        raids.forEach(raid =>
-          raid.addEventListener('click', function() {
-            setTimeout(function() {
-              $WowheadPower.refreshLinks();
-            }, 100);
-          })
-        );
-      });
+      // window.addEventListener('load', function() {
+      //   const raids = document.querySelectorAll('.list-group-item');
+      //   raids.forEach(raid =>
+      //     raid.addEventListener('click', function() {
+      //       setTimeout(function() {
+      //         $WowheadPower.refreshLinks();
+      //       }, 100);
+      //     })
+      //   );
+      // });
     </script>
     <script src="https://wow.zamimg.com/widgets/power.js"></script>
     <title>Classic Raid Loot</title>
