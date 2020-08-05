@@ -2,7 +2,7 @@ import React from "react";
 
 const DkpTable = (props) => (
   <div className="col-md-12">
-    <table class="table table-hover">
+    <table className="table table-hover">
       <thead>
         <tr>
           <th scope="col">Player</th>
@@ -13,18 +13,17 @@ const DkpTable = (props) => (
       </thead>
       <tbody>
         {props.data.map((player, index) => (
-          <tr>
-            <th scope="row">
-              <div>{player.player}</div>
-              {player.class}
+          <tr key={index}>
+            <th scope="row" className="dkptable__player">
               <div>
                 <img
-                  src={`https://wow.zamimg.com/images/wow/icons/large/classicon_${player.class.toLowerCase()}.jpg`}
+                  src={`https://wow.zamimg.com/images/wow/icons/small/classicon_${player.class.toLowerCase()}.jpg`}
                   alt=""
                 />
               </div>
+              <div>{player.player}</div>
             </th>
-            <td colspan="2">{player.dkp}</td>
+            <td>{player.dkp}</td>
             <td>{player.lifetimegained}</td>
             <td>{player.lifetimespent}</td>
           </tr>

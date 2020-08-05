@@ -5,7 +5,6 @@ function App() {
   const [table, setTable] = useState("dkptable");
   const viewToggles = [
     { name: "DKP Table", value: "dkptable" },
-    { name: "DKP History", value: "dkphistory" },
     { name: "Loot History", value: "loothistory" },
   ];
 
