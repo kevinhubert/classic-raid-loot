@@ -13,7 +13,7 @@ function App() {
       <div className="container">
         <div className="row header-primary">
           <div className="col-md-12">
-            <h1 className="top-header">Classic Raid Loot - The Departed R2</h1>
+            <h1 className="top-header">Classic Raid Loot - Absolution</h1>
           </div>
         </div>
         <div className="row">
