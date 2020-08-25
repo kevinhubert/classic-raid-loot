@@ -1,6 +1,14 @@
 $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
 @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
+body,
+#root {
+  background: -webkit-linear-gradient(bottom, #c471f5, #fa71cd);
+}
+.App > .container {
+  background-color: #ffffff;
+  margin-top: 50px;
+}
 .header-primary {
   padding-top: 1rem;
   padding-bottom: 2rem;
