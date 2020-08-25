@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import DisplayTable from "./components/DisplayTable";
+import logo from "./images/logo.png";
 
 function App() {
   const [table, setTable] = useState("dkptable");
@@ -13,6 +14,9 @@ function App() {
       <div className="container">
         <div className="row header-primary">
           <div className="col-md-12">
+            <div className="logo">
+              <img src={logo} alt="" width="250px" />
+            </div>
             <h1 className="top-header">Classic Raid Loot - Absolution</h1>
           </div>
         </div>
